@@ -1,0 +1,21 @@
+.navbar {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand {
+  font-weight: bold;
+  font-family: HeyComic;
+  font-size: 2em;
+}
+.nav-link {
+  font-size: 1.1rem;
+  font-family: HeyComic;
+}
+.navbar-nav {
+  align-items: center;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    justify-content: center;
+  }
+}

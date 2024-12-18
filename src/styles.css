@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+/* For the food card gap */
+.card {
+    margin-bottom: 20px; /* Adds bottom margin between cards */
+  }
+  
+  /* Search Bar Gap */
+  input[type="text"] {
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+  
+  /* Meal Name Font Size */
+  .card-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  
+  /* Smaller 'Add to Cart' button */
+  .card .btn-sm {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+  
+  /* For Remove Button in Cart */
+  .card .btn-danger.btn-sm {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+  
+  .card-img {
+    object-fit: cover;
+    height: 150px;
+  }
+  
+  .card-body {
+    padding: 10px;
+  }
+  
+  .container {
+    max-width: 1200px;
+  }
+  
+  @media (max-width: 768px) {
+    .card-img {
+      height: 120px;
+    }
+  
+    .card-body {
+      padding: 8px;
+    }
+  }
+  

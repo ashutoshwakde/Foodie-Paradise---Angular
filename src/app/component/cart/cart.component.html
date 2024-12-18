@@ -1,0 +1,63 @@
+
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-8">
+      <div *ngIf="cart.length === 0" class="text-center">
+        <p>Your cart is empty!</p>
+        <a class="btn btn-primary" routerLink="/">Go Back to Meals</a>
+      </div>
+
+      <div *ngIf="cart.length > 0">
+        <div
+          *ngFor="let item of cart; let i = index"
+          class="d-flex align-items-center mb-3"
+        >
+          <div class="card d-flex w-100">
+            <div class="row no-gutters">
+              <div class="col-md-3">
+                <img
+                  [src]="item.strMealThumb"
+                  class="card-img"
+                  alt="{{ item.strMeal }}"
+                />
+              </div>
+              <div class="col-md-9">
+                <div class="card-body">
+                  <h5 class="card-title">{{ item.strMeal }}</h5>
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <input
+                        type="number"
+                        [(ngModel)]="item.quantity"
+                        min="1"
+                        class="form-control w-50"
+                        (change)="updateQuantity(i, item.quantity)"
+                      />
+                    </div>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      (click)="removeFromCart(i)"
+                    >
+                      Remove
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card p-3">
+        <h4>Total: ${{ totalPrice.toFixed(2) }}</h4>
+        <button class="btn btn-danger w-100 mb-2" (click)="clearCart()">
+          Clear Cart
+        </button>
+        <button class="btn btn-success w-100">Checkout</button>
+      </div>
+    </div>
+  </div>
+</div>

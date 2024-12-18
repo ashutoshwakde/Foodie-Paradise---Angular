@@ -1,0 +1,30 @@
+
+
+   .list-group-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .list-group-item:hover {
+    background-color: #f1f1f1;
+    transform: translateX(5px);
+  }
+  
+  .item-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .img-thumbnail {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .btn-success {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  
