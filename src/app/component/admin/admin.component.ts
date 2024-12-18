@@ -9,15 +9,6 @@ import { CardService } from 'src/app/services/card.service';
 })
 export class AdminComponent implements OnInit {
 
-// cards:Card[]= [];
-  // card:Card = {
-  //   id: '',
-  //   cardholderName: "",
-  //   cardNumber: "",
-  //   expiryMonth: "",
-  //   expiryYear: "",
-  //   cvc: ""
-
   cards: Card[] = [];
   card: Card = {
     id: "",

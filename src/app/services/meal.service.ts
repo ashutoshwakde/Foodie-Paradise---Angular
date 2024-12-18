@@ -12,7 +12,6 @@ export class MealService {
 
   constructor(private http: HttpClient) {}
 
-  // Fetch meals by search keyword
   searchMeals(keyword: string): Observable<any> {
     return this.http.get(`${this.apiUrl}/search.php?s=${keyword}`);
   }
